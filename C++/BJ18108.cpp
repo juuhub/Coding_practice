@@ -2,10 +2,10 @@
 using namespace std;
 
 int main(){
-    int year;
-    cin >> year;
+    int cyear;
+    cin >> cyear;
 
-    cout << year - 543 << endl;
+    cout << cyear - 543 << endl;
 
     return 0;
 }
