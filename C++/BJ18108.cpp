@@ -5,7 +5,7 @@ int main(){
     int year;
     cin >> year;
 
-    cout << year - 543;
+    cout << year - 543 << endl;
 
     return 0;
 }
