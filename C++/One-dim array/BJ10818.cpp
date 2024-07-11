@@ -1,17 +1,19 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main(){
-    int times, max=-1000001, min=10000001, num;
+    int times;
     cin >> times;
+    int num[times] = {0,};
 
     for(int i=0; i<times; i++){
-        cin >> num;
-        if(num>max) max = num;
-        else if(num<min) min = num;
+        cin >> num[i];
     }
 
-    cout << min << " " << max;
+    sort(num, num+times);
+
+    cout << num[0] << " " << num[times-1];
 
     return 0;
 }
