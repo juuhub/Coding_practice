@@ -19,6 +19,7 @@ int main(){
             sum += pow(n, i)*(ch-'A'+10);
         }
     }
+    
     cout << sum;
 
     return 0;
