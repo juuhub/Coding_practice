@@ -1,32 +1,26 @@
 #include <iostream>
-#include <cmath>
+#include <algorithm>
+#include <string>
 using namespace std;
 
 int main(){
-    int input, b, zari = 0, i;
-    string output;
+    int input, b, i;
+    string output = "";
 
     cin >> input >> b;
-    i = input;
 
-    while(i>0){
-        i /= b;
-        zari++;
+
+    while(input>0){
+        i = input % b;
+
+        if(i<10) output += (char)(i + '0');
+        else output += (char)(i - 10 + 'A');
+
+        input /= b;
     }
 
-    for(int j=1; j<=zari; j++){
-        i = input%b;
-        if(i>9){
-            i = i - 10 + 'A';
-            output += i;
-        }
-        else{
-            output += i;
-        }
-        i /= b;
-    }
-
-    cout << output;
+    reverse(output.begin(), output.end());
+    cout << output << endl;
 
     return 0;
 }
