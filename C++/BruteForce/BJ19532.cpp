@@ -2,6 +2,11 @@
 #include <stdlib.h>
 using namespace std;
 
+/*
+int y = (c * d - a * f) / (b * d - a * e);
+int x = (c * e - b * f) / (a * e - b * d);
+*/
+
 int main(){
     int a, b, c, d, e, f;
     int x, y;
